@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.wuyumoom"
-version = "2.0.0-SNAPSHOT"
+version = "2.0.2-SNAPSHOT"
 
 repositories {
     mavenCentral()
@@ -38,9 +38,9 @@ kotlin {
 tasks.named<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar>("shadowJar") {
     archiveBaseName.set("YuQQBot")
     archiveClassifier.set("")
-    archiveVersion.set("2.0.0") // 可以去掉版本号
+    archiveVersion.set(version.toString()) // 可以去掉版本号
     mergeServiceFiles()
     manifest {
-        attributes["Main-Class"] = "com.wuyumoom.yuqqbot.MainKt"
+        attributes["Main-Class"] = "com.wuyumoom.yuqqbot.YuQQBot"
     }
 }
